@@ -1,0 +1,10 @@
+
+Add the feature of upsrteam health check for upstream fair module in Tengine
+
+$ git clone git://github.com/gnosek/nginx-upstream-fair.git
+$ cd nginx-upstream-fair
+$ patch -p1 < /path/to/this/upstream-fair-upstream-check.patch
+$ cd /path/to/tengine
+$ ./configure --with-http_upstream_check_module --add-module=/path/to/nginx-upstream-fair
+$ make
+$ make install
