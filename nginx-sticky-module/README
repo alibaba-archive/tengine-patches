@@ -1,0 +1,9 @@
+This patch can add the feature of upstream check for nginx-sticky-module in Tengine
+
+$ svn checkout http://nginx-sticky-module.googlecode.com/svn/trunk/ nginx-sticky-module
+$ cd nginx-sticky-module
+$ patch -p0 < /path/to/nginx-sticky-module-upstream-check.patch
+$ cd /path/to/tengine
+$ ./configure --with-http_upstream_check_module --add-module=/path/to/nginx-sticky-module
+$ make
+$ make install
